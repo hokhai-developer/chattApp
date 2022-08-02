@@ -1,0 +1,47 @@
+@import 'src/scss/base';
+
+.wrapper {
+    width: 100%;
+    display: block;
+    padding: 0;
+    max-width: $max-width-1320;
+    margin: 0 auto;
+}
+
+//canh gird o giua man hinh
+
+@media only screen and(min-width: calc($max-width-1200 + $margin-grid*2)) and (max-width: calc($max-width-1320 + $margin-grid*2 - 1px)) {
+    .wrapper.grid {
+        max-width: $max-width-1200;
+    }
+}
+
+@media only screen and(min-width: calc($max-width-1080 + $margin-grid*2)) and (max-width: calc($max-width-1200 + $margin-grid*2 - 1px)) {
+    .wrapper.grid {
+        max-width: $max-width-1080;
+    }
+}
+
+@media only screen and(min-width: calc($max-width-960 + $margin-grid*2)) and (max-width: calc($max-width-1080 + $margin-grid*2 - 1px)) {
+    .wrapper.grid {
+        max-width: $max-width-960;
+    }
+}
+
+@media only screen and(min-width: calc($max-width-840 + $margin-grid*2)) and (max-width: calc($max-width-960 + $margin-grid*2 - 1px)) {
+    .wrapper.grid {
+        max-width: $max-width-840;
+    }
+}
+
+@media only screen and(min-width: calc($max-width-720 + $margin-grid*2)) and (max-width: calc($max-width-840 + $margin-grid*2 - 1px)) {
+    .wrapper.grid {
+        max-width: $max-width-720;
+    }
+}
+
+@media only screen and (max-width: calc($max-width-720 + $margin-grid*2 - 1px)) {
+    .wrapper.grid {
+        max-width: $max-width-600;
+    }
+}

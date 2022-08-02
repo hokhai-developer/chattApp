@@ -1,0 +1,30 @@
+@import 'src/scss/base';
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$padding-12;
+    margin-right: -$padding-12;
+    &.no-gutter {
+        margin: 0;
+    }
+}
+
+@include tablet {
+    .wrapper {
+        margin-left: -$padding-colum-8;
+        margin-right: -$padding-colum-8;
+        &.no-gutter {
+            margin: 0;
+        }
+    }
+}
+@include mobile {
+    .wrapper {
+        margin-left: -$padding-colum-4;
+        margin-right: -$padding-colum-4;
+        &.no-gutter {
+            margin: 0;
+        }
+    }
+}
