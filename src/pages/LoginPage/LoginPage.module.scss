@@ -1,0 +1,13 @@
+@import 'src/scss/base';
+
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    .content {
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

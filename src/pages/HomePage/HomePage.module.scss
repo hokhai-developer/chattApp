@@ -1,0 +1,15 @@
+@import 'src/scss/base';
+
+.wrapper {
+    height: 100vh;
+    min-height: 300px;
+    .container {
+        display: flex;
+        height: 100%;
+        .chat-room {
+            flex: 1;
+            height: 100%;
+            background-color: red;
+        }
+    }
+}

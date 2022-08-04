@@ -1,0 +1,7 @@
+@import 'src/scss/base';
+
+.wrapper {
+    width: 100%;
+    height: calc(100vh - 96px);
+    overflow: overlay;
+}

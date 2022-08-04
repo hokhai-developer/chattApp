@@ -1,7 +1,9 @@
 @import 'src/scss/base';
 
 .wrapper {
+    width: 100%;
     max-width: $max-width-1334;
     overflow: hidden;
     margin: 0 auto;
+    background-color: $white-color;
 }

@@ -1,14 +1,24 @@
-import Grid from './components/Grid';
-import { useEffect } from 'react';
-import Row from './components/Row';
-import Colum from './components/Colum';
-import classNames from 'classnames/bind';
-import styles from './App.module.scss';
-import Container from './components/Container';
+import AuthProvider from './Context/AuthProvider';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import MainLayOut from './LayOuts/MainLayOut';
+import MessagePage from './pages/MessagePage';
 
-const cx = classNames.bind(styles);
 function App() {
-    return <div>hello app react</div>;
+    return (
+        <BrowserRouter>
+            <AuthProvider>
+                <Routes>
+                    <Route path="/" exact element={<MainLayOut />}>
+                        <Route index element={<HomePage />} />
+                        <Route path="/message" element={<MessagePage />} />
+                    </Route>
+                    <Route path="/login" element={<LoginPage />} />
+                </Routes>
+            </AuthProvider>
+        </BrowserRouter>
+    );
 }
 
 export default App;

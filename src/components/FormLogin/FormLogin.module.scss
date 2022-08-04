@@ -1,0 +1,77 @@
+@import 'src/scss/base';
+
+.wrapper {
+    flex: 1;
+    .container {
+        .form-login {
+            width: 100%;
+            max-width: 450px;
+            min-height: 300px;
+            border: 1px solid $color-gray-500;
+            padding: 24px;
+            margin: 0 auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .form-name {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 1.35;
+                color: $color-secondary;
+                text-align: center;
+            }
+            .form-desc {
+                font-size: 18px;
+                font-weight: 400;
+                color: $text-color-bold;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+            .form-group {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                &:not(nth-last-child) {
+                    margin-bottom: 12px;
+                }
+                .form-btn {
+                    border: 1px solid $color-gray-400;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 6px 12px;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    &.facebook {
+                        &:hover {
+                            background-color: $color-cyan;
+                            color: $white-color;
+                        }
+                    }
+                    &.google {
+                        &:hover {
+                            background-color: $color-primary;
+                            color: $white-color;
+                        }
+                    }
+
+                    .form-image {
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 12px;
+                        background-color: transparent;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        object-fit: cover;
+                    }
+                    .form-btn-title {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

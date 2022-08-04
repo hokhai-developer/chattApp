@@ -1,0 +1,47 @@
+@import 'src/scss/base';
+
+.wrapper {
+    height: 72px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    cursor: pointer;
+    background-color: $white-color;
+    &:hover {
+        background-color: #e5efff;
+    }
+    .left {
+        width: 48px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .center {
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0 8px;
+        .content {
+            flex: 1;
+            .name {
+                font-size: 18px;
+                font-weight: 500;
+                color: $text-color-bold;
+                line-height: 1.2;
+            }
+            .last-message {
+                font-size: 16px;
+                line-height: 1.2;
+                font-weight: 400;
+                color: $text-color-normal;
+            }
+        }
+        .time-stamp {
+            font-size: 16px;
+            font-weight: 400;
+            color: $text-color-normal;
+        }
+    }
+}

@@ -32,7 +32,7 @@ $color-gray-800: #343a40;
 $color-gray-900: #212529;
 
 $color-primary: #ff0000;
-$color-secondary: #14191e;
+$color-secondary: #0091ff;
 $color-success: #0cbc87;
 $color-info: #4f9ef8;
 $color-warning: #f7c32e;
@@ -40,7 +40,10 @@ $color-danger: #d6293e;
 $color-light: #eef0f2;
 $white-color: #fff;
 $black-color: #000;
-$background-body-color: #676a79;
+$background-body-color: #f9f9f9;
+$back-ground-gradient-purple-blue: linear-gradient(199deg, #7562d8, #0068ff);
+$back-ground-gradient-light-blue: linear-gradient(199deg, #72abff, #0068ff);
+$back-ground-gradient-teal-blue: linear-gradient(199deg, #00bac0, #0068ff);
 
 //width && hight
 $max-width-1334: 1334px; //max-container
@@ -117,6 +120,22 @@ body {
     color: $text-color-normal;
     overflow: overlay;
 }
+//custom scrollbar
+
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 18px;
+    background-color: $color-gray-600;
+}
 
 button,
 input,
@@ -128,4 +147,8 @@ input,
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+.MuiTooltip-popper[data-popper-placement] .css-ja5taz-MuiTooltip-tooltip {
+    font-size: 12px;
+    color: $white-color;
 }

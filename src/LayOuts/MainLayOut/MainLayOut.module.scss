@@ -1,0 +1,15 @@
+@import 'src/scss/base';
+
+.wrapper {
+    background-color: $white-color;
+    display: flex;
+    min-height: 100vh;
+    background-color: $color-secondary;
+    .container {
+        display: flex;
+
+        .content {
+            flex: 1;
+        }
+    }
+}
