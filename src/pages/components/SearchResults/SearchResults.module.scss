@@ -1,0 +1,6 @@
+@import 'src/scss/base';
+
+.wrapper-list {
+    height: calc(100vh - 64px);
+    overflow: overlay;
+}

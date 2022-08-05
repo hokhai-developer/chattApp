@@ -6,13 +6,20 @@ import Image from '~/components/Image';
 import images from '~/assets/images';
 import { provider, auth } from '~/firebase/config';
 import { signInWithPopup } from 'firebase/auth';
-import { signInWithProvider } from '~/utils/signIn';
+import { signInWithProvider } from '~/firebase/signIn';
+import { generateKeywords } from '~/utils/generateKeywords';
+import { setDocument } from '~/firebase/services';
 
 const cx = classNames.bind(styles);
 const FormLogin = (props) => {
     const handleSignIn = async (provider) => {
         const user = await signInWithProvider(provider);
         if (user) {
+            const newUser = {
+                ...user,
+                searchKeys: generateKeywords(user.displayName),
+            };
+            await setDocument('users', newUser);
         }
     };
 

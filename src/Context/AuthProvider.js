@@ -27,9 +27,8 @@ const AuthProvider = ({ children }) => {
             unsubscribed();
         };
     }, [auth]);
-    console.log(user);
     return (
-        <AuthContext.Provider value={user}>
+        <AuthContext.Provider value={{ user }}>
             {loading ? <Loading title={'Đang tải trang tiếp theo ... '} /> : children}
         </AuthContext.Provider>
     );

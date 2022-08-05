@@ -10,7 +10,8 @@ import { AuthContext } from '~/Context/AuthProvider';
 
 const cx = classNames.bind(styles);
 const User = (props) => {
-    const user = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
+
     return (
         <div className={cx('wrapper-user')}>
             {user.uid && (
