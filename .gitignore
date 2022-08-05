@@ -7,7 +7,8 @@
 
 # testing
 /coverage
-
+# emulators ò firebase
+/emulators
 # production
 /build
 

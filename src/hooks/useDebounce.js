@@ -7,9 +7,7 @@ export const useDebounce = (value, delay = 500) => {
             setDebounce(value.trim());
         }, delay);
         return () => {
-            if (timerId) {
-                clearTimeout(timerId);
-            }
+            if (timerId) clearTimeout(timerId);
         };
     }, [value]);
     return debounce;

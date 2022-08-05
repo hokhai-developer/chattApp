@@ -6,7 +6,7 @@ export const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
     const { user } = useContext(AuthContext);
-
+    console.log(user.uid);
     const conversationsConditions = useMemo(() => {
         return {
             fieldName: 'members', //[userId, userId, userId,.....]

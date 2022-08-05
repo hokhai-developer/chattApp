@@ -4,7 +4,7 @@ import styles from './SideBar.module.scss';
 import PropTypes from 'prop-types';
 import Icon from '~/components/Icon';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import User from '../SideBarItem/User';
+import UserInfo from '../SideBarItem/UserInfo';
 import SideBarItem from '../SideBarItem';
 import LogOut from '../SideBarItem/LogOut';
 import Message from '../SideBarItem/Message';
@@ -19,7 +19,7 @@ const SideBar = ({ className }) => {
                     <Home />
                 </SideBarItem>
                 <SideBarItem className={cx('item-user')}>
-                    <User />
+                    <UserInfo />
                 </SideBarItem>
                 <SideBarItem>
                     <Message />

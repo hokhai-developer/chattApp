@@ -7,7 +7,6 @@ const useFirebaseStore = (collectionName, condition, q) => {
     const [documents, setDocuments] = useState([]);
     useEffect(() => {
         let collectionRef = collection(db, collectionName);
-
         if (q) {
             collectionRef = query(collectionRef, orderBy(q));
         }
@@ -24,15 +23,16 @@ const useFirebaseStore = (collectionName, condition, q) => {
                 where(condition.fieldName, condition.operator, condition.compareValue),
             );
         }
-
         const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
             const newDocuments = snapshot.docs.map((doc) => ({
                 ...doc.data(),
                 id: doc.id,
             }));
             setDocuments(newDocuments);
-            return unsubscribe;
         });
+        return () => {
+            unsubscribe();
+        };
     }, [condition, collectionName, q]);
     return documents;
 };

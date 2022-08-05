@@ -4,8 +4,8 @@ import classNames from 'classnames/bind';
 import styles from './MainLayOut.module.scss';
 import { Outlet } from 'react-router-dom';
 import Container from '~/components/Container';
-import SideBar from '~/pages/components/SideBar';
-import Contact from '~/pages/components/Contact';
+import SideBar from '~/layOuts/components/SideBar';
+import Contact from '~/layOuts/components/Contact';
 
 const cx = classNames.bind(styles);
 const MainLayOut = (props) => {

@@ -13,13 +13,13 @@ import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 const LoginPage = (props) => {
-    const user = useContext(AuthContext);
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (user?.id) {
-            navigate('/');
-        }
-    }, [user]);
+    // const user = useContext(AuthContext);
+    // const navigate = useNavigate();
+    // useEffect(() => {
+    //     if (user?.id) {
+    //         navigate('/');
+    //     }
+    // }, [user]);
     return (
         <div className={cx('wrapper')}>
             <Container>

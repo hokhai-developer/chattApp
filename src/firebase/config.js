@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { getApp, getApps, initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { getAuth, GoogleAuthProvider, FacebookAuthProvider } from 'firebase/auth';
+import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
+import { getAuth, GoogleAuthProvider, FacebookAuthProvider, connectAuthEmulator } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: 'AIzaSyBzGfvQj2PFvAvetpAsOKwV7TwoW_GBEFI',
@@ -21,4 +21,9 @@ const provider = {
     google: new GoogleAuthProvider(),
     facebook: new FacebookAuthProvider(),
 };
+///emulators
+if (window.location.hostname === 'localhost') {
+    connectFirestoreEmulator(db, 'localhost', 8080);
+}
+connectAuthEmulator(auth, 'http://localhost:9099');
 export { db, auth, provider };
