@@ -1,0 +1,40 @@
+@import 'src/scss/base';
+
+.wrapper-chats {
+    flex: 1;
+    background-color: #c5c0b8;
+    overflow: overlay;
+}
+
+//message item
+
+.wrapper-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 12px;
+    margin: 8px 16px;
+
+    .item-avatar {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+    .item-mess {
+        background-color: $white-color;
+        padding: 12px;
+        margin-bottom: 4px;
+        border-radius: 8px;
+        min-width: 32px;
+        max-width: calc(100% - 60px);
+
+        .mess {
+            font-size: 16px;
+            color: $text-color-bold;
+        }
+        .time {
+            font-size: 14px;
+            color: $text-color-normal;
+        }
+    }
+}

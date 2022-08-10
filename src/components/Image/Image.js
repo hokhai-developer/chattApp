@@ -5,24 +5,16 @@ import styles from './Image.module.scss';
 import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
-const Image = React.forwardRef(({ className, src, alt = 'pages-ui Success', fallBack, title, ...props }, ref) => {
+const Image = ({ className, src, alt = 'pages-ui Success', fallBack, title, ...props }) => {
     const [url, setUrl] = useState(src);
     const handleError = () => {
         const newUrl = fallBack ? fallBack : images.noImage;
         setUrl(newUrl);
     };
     return (
-        <img
-            className={cx('wrapper', className)}
-            src={url}
-            alt={alt}
-            onError={handleError}
-            title={title}
-            ref={ref}
-            {...props}
-        />
+        <img className={cx('wrapper', className)} src={url} alt={alt} onError={handleError} title={title} {...props} />
     );
-});
+};
 
 Image.propTypes = {
     className: PropTypes.string,

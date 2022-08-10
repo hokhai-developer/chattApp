@@ -1,0 +1,127 @@
+@import 'src/scss/base';
+
+.wrapper-form {
+    width: 520px;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    background-color: $white-color;
+    border: 1px solid $color-gray-500;
+    border-radius: 4px;
+    opacity: 1;
+    overflow: hidden;
+
+    .body {
+        padding: 8px 16px 8px 16px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .group {
+            display: flex;
+            align-items: center;
+            gap: 0 12px;
+            margin-bottom: 12px;
+
+            .name {
+                font-size: 16px;
+                line-height: 1;
+                color: $text-color-bold;
+                font-weight: 500;
+            }
+
+            .input-name {
+                flex: 1;
+                padding: 8px;
+                border-bottom: 1px solid $color-gray-400;
+
+                &:focus {
+                    border-color: $color-blue;
+                }
+            }
+        }
+        .title {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 4px;
+            font-weight: 500;
+            color: $text-color-bold;
+        }
+        .add-form {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            border: 1px solid $color-gray-500;
+            border-radius: 999px;
+            margin-bottom: 8px;
+            overflow: hidden;
+
+            .btn-search {
+                padding: 6px 0 6px 12px;
+                background-color: transparent;
+            }
+            .input {
+                flex: 1;
+                padding: 8px 40px 8px 8px;
+            }
+
+            .btn-clear {
+                position: absolute;
+                right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 2px;
+                background-color: transparent;
+                border-radius: 50%;
+                background-color: $color-gray-400;
+                color: $white-color;
+                cursor: pointer;
+                &:hover {
+                    border-radius: 50%;
+                    background-color: $color-primary;
+                    color: $white-color;
+                }
+            }
+
+            &:focus-within {
+                border: 1px solid $color-blue;
+                .btn-search {
+                    color: $color-blue;
+                }
+            }
+        }
+        .add-members {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            .title {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 8px;
+                color: $text-color-bold;
+                font-weight: 500;
+            }
+
+            .list-friend {
+                flex: 1;
+                max-height: 292px;
+                overflow: overlay;
+            }
+        }
+    }
+}
+
+//popper
+.popper {
+    z-index: 10000;
+    transform: translateX(56px);
+    overflow: hidden;
+    background-color: $white-color;
+    border: 1px solid $color-gray-500;
+    .list-result {
+        width: 488px;
+        height: 338px;
+        overflow: overlay;
+    }
+}

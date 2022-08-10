@@ -2,12 +2,15 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './ConversationItem.module.scss';
 import PropTypes from 'prop-types';
+import Avatar from '~/components/Avatar';
 
 const cx = classNames.bind(styles);
-const ConversationItem = (props) => {
+const ConversationItem = ({ conversation }) => {
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('left')}>avatar</div>
+            <div className={cx('left')}>
+                <Avatar type={'single'} />
+            </div>
             <div className={cx('center')}>
                 <div className={cx('content')}>
                     <h4 className={cx('name')}>Name conversation</h4>

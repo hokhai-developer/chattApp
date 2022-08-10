@@ -13,7 +13,7 @@ function App() {
                 <AppProvider>
                     <Routes>
                         <Route path="/" exact element={<MainLayOut />}>
-                            <Route index element={<HomePage />} />
+                            <Route index element={<HomePage />} /> */
                             <Route path="/message" element={<MessagePage />} />
                         </Route>
                         <Route path="/login" element={<LoginPage />} />

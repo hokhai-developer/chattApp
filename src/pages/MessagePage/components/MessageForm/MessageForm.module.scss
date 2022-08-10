@@ -1,0 +1,36 @@
+@import 'src/scss/base';
+
+.wrapper-form {
+    width: 100%;
+    .form-content {
+        display: flex;
+        align-items: flex-end;
+        .form-input {
+            display: flex;
+            flex: 1;
+            max-height: 152px;
+            .input-text {
+                display: block;
+                flex: 1;
+                padding: 12px 10px 18px 16px;
+                border: none;
+                outline: none;
+            }
+        }
+        .form-btn-send {
+            width: 46px;
+            height: 40px;
+            margin-right: 16px;
+            margin-bottom: 7px;
+            text-align: center;
+            border-radius: 4px;
+            color: $text-color-normal;
+            background-color: $color-gray-300;
+            cursor: pointer;
+            &:hover {
+                background-color: $color-blue;
+                color: $white-color;
+            }
+        }
+    }
+}

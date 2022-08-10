@@ -1,0 +1,46 @@
+@import 'src/scss/base';
+
+.wrapper-mess-header {
+    width: 100%;
+    .header {
+        width: 100%;
+        height: 68px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        background-color: $white-color;
+        .btn {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 50%;
+            color: $color-gray-700;
+            margin: 0 8px 0 2px;
+            &.btn-back:hover {
+                background-color: $color-gray-300;
+                color: $black-color;
+            }
+        }
+        .info {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            .title {
+                flex: 1;
+                margin: 0 18px 0 12px;
+                .name {
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $text-color-bold;
+                    @include textOverFlow(1);
+                }
+                .time-update {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $text-color-normal;
+                }
+            }
+        }
+    }
+}

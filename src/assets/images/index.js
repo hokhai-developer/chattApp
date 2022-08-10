@@ -4,6 +4,9 @@ const images = {
     userDefault: require('~/assets/images/images/user.png'),
     logoGoogle: require('~/assets/images/images/google.png'),
     logoFacebook: require('~/assets/images/images/facebook.png'),
+    headerSlice1: require('~/assets/images/images/header-slice-1.webp'),
+    headerSlice2: require('~/assets/images/images/header-slice-2.webp'),
+    headerSlice3: require('~/assets/images/images/header-slice-3.webp'),
 };
 
 export default images;

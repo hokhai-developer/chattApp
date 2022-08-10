@@ -1,0 +1,33 @@
+@import 'src/scss/base';
+
+.wrapper-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $text-color-bold;
+    text-align: center;
+    .header-title {
+        font-size: 30px;
+        margin: 24px 0 12px 0;
+        text-align: center;
+        .user-name {
+            color: $color-success;
+        }
+        .web-name {
+            color: $color-secondary;
+        }
+    }
+    .header-description {
+        font-size: 20px;
+        color: $color-secondary;
+    }
+    .header-more {
+        .more-name {
+            text-align: left;
+        }
+        .text-bold {
+            color: $color-teal;
+        }
+    }
+}

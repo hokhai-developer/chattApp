@@ -99,6 +99,16 @@ $mobile-width: 740px; //mobile
     }
 }
 
+@mixin textOverFlow($line) {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: $line; /* số dòng hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @content;
+}
+
 *,
 *::after,
 *::before {

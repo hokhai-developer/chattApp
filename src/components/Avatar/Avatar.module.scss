@@ -1,0 +1,42 @@
+@import 'src/scss/base';
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .avatar-item {
+        display: block;
+        border-radius: 50%;
+        max-width: 48px;
+        &.end {
+            line-height: 1;
+            text-align: center;
+            color: $color-secondary;
+        }
+
+        &.single {
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            border: 2px solid $white-color;
+        }
+        &.group {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            border: 2px solid $white-color;
+        }
+    }
+
+    .list-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

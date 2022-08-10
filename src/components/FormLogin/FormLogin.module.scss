@@ -2,19 +2,23 @@
 
 .wrapper {
     flex: 1;
+
     .container {
         .form-login {
-            width: 100%;
-            max-width: 450px;
-            min-height: 300px;
-            border: 1px solid $color-gray-500;
-            padding: 24px;
-            margin: 0 auto;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            width: 100%;
+            max-width: 450px;
+            min-height: 300px;
+            padding: 24px;
+            margin: 0 auto;
+            border: 1px solid $color-gray-500;
+            border-radius: 8px;
+            background-color: $white-color;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
             .form-name {
                 font-weight: 600;
                 font-size: 24px;
