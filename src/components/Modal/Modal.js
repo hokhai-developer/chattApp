@@ -12,7 +12,7 @@ const Modal = ({ children, className, showModal, setShowModal = () => {} }) => {
             })}
             onClick={() => setShowModal(false)}
         >
-            {children}
+            <div onClick={(e) => e.stopPropagation()}>{children}</div>
         </div>
     );
 };
