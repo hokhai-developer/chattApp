@@ -7,9 +7,9 @@ import ListAvatar from './ListAvatar';
 import moment from 'moment';
 
 const cx = classNames.bind(styles);
-const Avatar = ({ type, src, alt, className, ...passProps }) => {
+const Avatar = React.forwardRef(({ type, src, alt, className, ...passProps }, ref) => {
     return (
-        <div className={cx('wrapper', classNames)} {...passProps}>
+        <div className={cx('wrapper', classNames)} {...passProps} ref={ref}>
             {type === 'single' ? (
                 <Image
                     src={
@@ -27,7 +27,7 @@ const Avatar = ({ type, src, alt, className, ...passProps }) => {
             )}
         </div>
     );
-};
+});
 
 Avatar.propTypes = {};
 
